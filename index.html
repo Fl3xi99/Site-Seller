@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site Cooker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="nav-bar">
+        <div class="logo">MySite</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    </nav>
+    <main>
+        <section class="Container">
+            <h1 class="fade-in">Welcome To Site Cooker</h1>
+            <h2 class="fade-in-late">We cook sites for everykind of business.</h2>
+            <section class="features">
+    <div class="feature-card">
+        <h3>Custom Design</h3>
+        <p>We create tailored websites to fit your brand perfectly.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Responsive Layout</h3>
+        <p>Your site will look stunning on all devices and screens.</p>
+    </div>
+    <div class="feature-card">
+        <h3>Fast & Secure</h3>
+        <p>We ensure top performance and security for all our websites.</p>
+    </div>
+</section>
+        </section>
+
+        
+    </main>
+    <script src="index.js"></script>
+    <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+  </body>
+</html>

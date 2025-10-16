@@ -1,0 +1,212 @@
+ :root{
+    --deep-navy: #2B2D42;
+    --vibrant-red: #EF233C;
+    
+    --calm-green : #2E7D32;
+    --warm-yellow : #FFB300;
+    --bg-color : #FAFAFA;
+    --text-color: #212121;
+
+    --color-primary: #0A192F;
+  --color-secondary: #112D4E;
+  --color-accent: #00BFFF;
+  --color-highlight: #60A5FA;
+  --color-text: #E2E8F0;
+  --color-text-muted: #94A3B8;
+ }
+ 
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /*font-family: Arial, sans-serif;*/
+      font-family: "Roboto", sans-serif;
+      background-color: var(--color-primary);
+      
+    }
+nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-primary);
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      position: sticky;
+      font-size: 30px;
+      color: var(--color-text)
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex: 1;
+      
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+      font-weight: 900;
+      color: var(--color-text)
+    }
+
+    .nav-links li a:hover {
+      /*color: #007bff;*/
+      color: var(--color-text-muted);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+
+    .Container{
+    background-color: --color-primary;
+    background-image: url(photos/computer-program-coding-screen_53876-138060.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    padding: 50px 30px;
+    margin: 50px auto;
+    max-width: 98%;
+    color: var(--color-text);
+    gap:15px;
+    box-shadow: 0 0 20px black;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+    /* animations */
+
+
+    .typing {
+  display: inline-block;
+  border-right: 2px solid var(--color-accent);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px var(--color-accent),
+                 0 0 20px var(--color-accent);
+  }
+
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;             
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-late {
+  opacity: 0;             
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 30px;
+    opacity: 0;  
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.feature-card {
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,191,255,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0,191,255,0.5);
+}
+
+.feature-card h3 {
+    color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+
+  
