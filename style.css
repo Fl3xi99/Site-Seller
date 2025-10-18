@@ -34,7 +34,6 @@ nav {
       background: var(--color-primary);
       padding: 10px 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-      position: sticky;
       font-size: 30px;
       color: var(--color-text)
     }
@@ -74,6 +73,10 @@ nav {
       cursor: pointer;
     }
 
+    .nav-links a.active {
+  text-decoration: underline;
+}
+
 
     @media (max-width: 768px) {
       .menu-toggle {
@@ -98,6 +101,22 @@ nav {
         display: flex;
       }
 
+      .Container {
+    height: auto;
+    min-height: 100vh; /* at least full screen, but grows if needed */
+    padding: 40px 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
       
     }
 
@@ -115,7 +134,7 @@ nav {
     color: var(--color-text);
     gap:15px;
     box-shadow: 0 0 20px black;
-    height: 80vh;
+    min-height: 73vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -180,13 +199,24 @@ nav {
   animation-delay: 0.5s;
 }
 
+.text-box {
+  background: rgba(0, 0, 0, 0.7); 
+  /* backdrop-filter: blur(6px); */
+  color: var(--color-text);
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,191,255,0.3);
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 30px;
+}
 
 .features {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 10px auto;
     gap: 30px;
     opacity: 0;  
     animation: fadeIn 1s ease-out forwards;
